@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { UserController } from './user.controller';
-import { beforeEach, describe, it } from 'node:test';
+// Use Jest globals (describe, it, expect, beforeEach) provided by the test environment
 
 describe('UserController', () => {
   let controller: UserController;
