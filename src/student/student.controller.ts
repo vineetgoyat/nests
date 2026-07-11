@@ -18,9 +18,9 @@ export class StudentController {
     create(@Body() body: {name:string; age:number}){
         return this.studentService.createStudent(body);
     }
-    @Put()
-    update(@Param('id') id:string, @Body() body:{name:String; age:Number} ){
+    @Put(':id')
+    update(@Param('id') id:string, @Body() body:{name:string; age:number} ){
         return this.studentService.updateStudent(Number(id), body);
     }
-    
+
 }
