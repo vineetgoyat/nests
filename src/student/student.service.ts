@@ -9,7 +9,7 @@ export class StudentService {
     getAllStudents(){
         return this.students;
     }
-    getStudentsById(id:number){
+    getStudentById(id:number){
         const student = this.students.find((s) => s.id === id);
         if(!student){
             throw new NotFoundException('Student not found');
