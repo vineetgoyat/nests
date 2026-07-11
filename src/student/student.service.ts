@@ -34,7 +34,13 @@ export class StudentService {
         this.students[index] = {id, ...data};
         return this.students[index];
     }
-    //
+    //patch method-
+    patchStudent(id:number, data:Partial<{name:string; age:number}>){
+        const student= this.getStudentsById(id);
+        Object.assign(student, data);
+        return student;
+    }
+    /
 
 
 }
