@@ -40,7 +40,16 @@ export class StudentService {
         Object.assign(student, data);
         return student;
     }
-    /
 
+    //delete method
+    deleteStudent(id:number){
+        const index = this.students.findIndex((s) => s.id === id);
+        if(index === -1) {
+            throw new NotFoundException('Student Not Find')
+        }
+        const deleted = this.students.splice(index,1);
+        return {message:'student deleted',student : deleted[0]}
 
+        
+    }
 }
