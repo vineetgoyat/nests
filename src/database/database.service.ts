@@ -1,4 +1,4 @@
-import { Injectable, onModuleInit, onApplicationShutdown } from '@nestjs/common';
+import { Injectable, OnModuleInit, OnApplicationShutdown } from '@nestjs/common';
 
 @Injectable()
 export class DatabaseService {
