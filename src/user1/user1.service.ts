@@ -13,7 +13,7 @@ export class User1Service {
                 name : 'gujju',
                 address : {
                     street: 'sade dil ch',
-                    city: 'karachi'
+                    city: 'karchi'
                 }
                 
             })
