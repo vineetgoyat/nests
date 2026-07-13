@@ -20,6 +20,7 @@ import { EvController } from './ev/ev.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Student1Module } from './student1/student1.module';
 import { User1Controller } from './user1/user1.controller';
+import { User1Service } from './user1/user1.service';
 
 @Module({
   imports: [EmployeeModule, CategoryModule, StudentModule, CustomerModule, ConfigModule.forRoot({
@@ -28,7 +29,7 @@ import { User1Controller } from './user1/user1.controller';
 MongooseModule.forRoot(process.env.MONGO_URI!),
 Student1Module,],
   controllers: [AppController, UserController, ProductController, MynameController, UserRolesController, ExceptionController, DatabaseController, EvController, User1Controller],
-  providers: [AppService, ProductService, DatabaseService, EvService],
+  providers: [AppService, ProductService, DatabaseService, EvService, User1Service],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
