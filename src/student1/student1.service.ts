@@ -30,6 +30,6 @@ export class Student1Service {
     }
 
     async patchStudent1(id: string, data: Partial<Student1>): Promise<Student1 | null>{
-        return this.student1Model.findByIdAndUpdate()
+        return this.student1Model.findByIdAndUpdate(id, data, {new:true}).exec();
     }
 }
