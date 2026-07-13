@@ -14,4 +14,8 @@ export class Student1Service {
         const newStudent1 = new this.student1Model(data);
         return newStudent1.save();
     }
+
+    async getAllStudents1() : Promise<Student1[]>{
+        return this.student1Model.find().exec();
+    }
 }
