@@ -1,4 +1,4 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { Student1Service } from './student1.service';
 import { Student1 } from './student1.schema';
 
@@ -9,5 +9,10 @@ export class Student1Controller {
     @Post()
     async addStudent1(@Body() data: Partial<Student1>){
         return this.student1Service.createStudent1(data);
+    }
+
+    @Get()
+    async getStudent1(){
+        return this.student1Service.getAllStudents1();
     }
 }
