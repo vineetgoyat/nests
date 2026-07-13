@@ -10,3 +10,5 @@ export class User1 extends Document{
     @Prop({type : Address})
     'address': Address;
 }
+
+export const User1Schema = SchemaFactory.createForClass(User1)
