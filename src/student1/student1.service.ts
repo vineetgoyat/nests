@@ -25,7 +25,13 @@ export class Student1Service {
     }
 
     async updateStudent1 (id : string, data: Partial<Student1>):Promise<Student1 | null>{
-        return this.student1Model.findByIdAndUpdate(id, data, {new: true}).exec();
+        //return this.student1Model.findByIdAndUpdate(id, data, {new: true}).exec();
+        const updated = await this.student1Model.findByIdAndUpdate(id, {
+            name : data.name ?? null,
+            age : data.age ?? null,
+            email : data.email ?? null
+        },{override: true, new : true})
+        return updated;
         
     }
 
