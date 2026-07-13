@@ -13,6 +13,6 @@ export class User1Controller {
 
     @Get()
     getAll(){
-        return this.user1Service.createUser1();
+        return this.user1Service.findAll();
     }
 }
