@@ -1,5 +1,4 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { timeStamp } from 'console';
 import { Document } from 'mongoose';
 
 export type Student1Document = Student1 & Document;
@@ -8,10 +7,10 @@ export type Student1Document = Student1 & Document;
 export class Student1 {
 
     @Prop({required : true})
-    name: string;
+    'name': string;
 
     @Prop({required : true})
-    age: number;
+    'age': number;
 
     @Prop()
     email?: string;
