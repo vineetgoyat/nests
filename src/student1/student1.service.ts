@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Student1, Student1Document } from './student1.schema';
 import { Model } from 'mongoose';
+import { truncate } from 'fs';
 
 @Injectable()
 export class Student1Service {
@@ -21,5 +22,10 @@ export class Student1Service {
 
     async getStudent1ById(id : string): Promise<Student1 | null>{
         return this.student1Model.findById(id).exec();
+    }
+
+    async updateStudent1 (id : string, data: Partial<Student1>):Promise<Student1 | null>{
+        return this.student1Model.findByIdAndUpdate(id, data, {new: true}).exec();
+        
     }
 }
