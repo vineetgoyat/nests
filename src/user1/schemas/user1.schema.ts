@@ -11,4 +11,4 @@ export class User1 extends Document{
     'address': Address;
 }
 
-export const User1Schema = SchemaFactory.createForClass(User1)
+export const User1Schema = SchemaFactory.createForClass(User1);
