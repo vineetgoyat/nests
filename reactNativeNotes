@@ -8,3 +8,6 @@
 7.⁠ ⁠rewritee queries into stored procedures
 8.⁠ ⁠data storage types:- 1d array, 2d matrix, json for scattered data, hstore: stores data in key value pairs
 9.⁠ ⁠Objects are resuable , through Insert command we can insert data
+10.⁠ ⁠:: -> for casting data 
+11.⁠ ⁠we can read data from select. we can use dot operator to access properties of data
+12.⁠ ⁠inner, left , right joins
