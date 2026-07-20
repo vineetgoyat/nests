@@ -5,3 +5,6 @@
 4.⁠ ⁠MVCC:- read , write transactions do not lock each other
 5.⁠ ⁠Rich extensions (Postgis, citus, pg_embedding)
 6.⁠ ⁠Custom objects
+7.⁠ ⁠rewritee queries into stored procedures
+8.⁠ ⁠data storage types:- 1d array, 2d matrix, json for scattered data, hstore: stores data in key value pairs
+9.⁠ ⁠Objects are resuable , through Insert command we can insert data
