@@ -1,13 +1,13 @@
 1. It is component based programming thats why its reusable.
-1.⁠ ⁠Relational database. 
-2.⁠ ⁠Used for business analytics and mathematical uses.
-3.⁠ ⁠ACID
-4.⁠ ⁠MVCC:- read , write transactions do not lock each other
-5.⁠ ⁠Rich extensions (Postgis, citus, pg_embedding)
-6.⁠ ⁠Custom objects
-7.⁠ ⁠rewritee queries into stored procedures
-8.⁠ ⁠data storage types:- 1d array, 2d matrix, json for scattered data, hstore: stores data in key value pairs
-9.⁠ ⁠Objects are resuable , through Insert command we can insert data
-10.⁠ ⁠:: -> for casting data 
-11.⁠ ⁠we can read data from select. we can use dot operator to access properties of data
-12.⁠ ⁠inner, left , right joins
+2.⁠ ⁠Relational database. 
+3.⁠ ⁠Used for business analytics and mathematical uses.
+4.⁠ ⁠ACID
+5.⁠ ⁠MVCC:- read , write transactions do not lock each other
+6.⁠ ⁠Rich extensions (Postgis, citus, pg_embedding)
+7.⁠ ⁠Custom objects
+8.⁠ ⁠rewritee queries into stored procedures
+9.⁠ ⁠data storage types:- 1d array, 2d matrix, json for scattered data, hstore: stores data in key value pairs
+10.⁠ ⁠Objects are resuable , through Insert command we can insert data
+11.⁠ ⁠:: -> for casting data 
+12.⁠ ⁠we can read data from select. we can use dot operator to access properties of data
+13.⁠ ⁠inner, left , right joins
