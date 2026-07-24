@@ -9,3 +9,5 @@ export class Profile extends Document {
     @Prop()
     'qualification': string;
 }
+
+export const ProfileSchema = SchemaFactory.createForClass(Profile);
