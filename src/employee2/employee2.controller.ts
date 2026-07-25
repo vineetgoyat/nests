@@ -1,4 +1,4 @@
-import { Controller, Post } from '@nestjs/common';
+import { Controller, Get, Post } from '@nestjs/common';
 import { Employee2Service } from './employee2.service';
 
 @Controller('employee2')
@@ -8,5 +8,10 @@ export class Employee2Controller {
     @Post()
     create() {
         return this.employee2Service.createEmployee2();
+    }
+
+    @Get()
+    getAll() {
+        return this.employee2Service.findAll();
     }
 }
