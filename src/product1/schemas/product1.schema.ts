@@ -4,3 +4,8 @@ import {Tag} from './tag.schema';
 
 
 @Schema()
+export class Product1 extends Document {
+    @Prop()
+    'title': string;
+    @Prop({type : Tag})
+
