@@ -24,5 +24,9 @@ export class LibraryService {
         )
         return library.save();
          };
+
+         async getLibraries():Promise<Library[]>{
+            return this.libraryModel.find().populate('books').exec();
+         }
     }
 
