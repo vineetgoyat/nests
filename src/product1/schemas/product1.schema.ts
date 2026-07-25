@@ -11,4 +11,4 @@ export class Product1 extends Document {
     @Prop({type : [Tag]})
     'tags': Tag[];
 }
-export const Prodduct1Schema = SchemaFactory.createForClass(Product1);
+export const Product1Schema = SchemaFactory.createForClass(Product1);
