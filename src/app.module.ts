@@ -23,6 +23,7 @@ import { Student1Module } from './student1/student1.module';
 import { User1Module } from './user1/user1.module';
 import { Student2Module } from './student2/student2.module';
 import { Employee2Module } from './employee2/employee2.module';
+import { Product1Module } from './product1/product1.module';
 
 @Module({
   imports: [EmployeeModule, CategoryModule, StudentModule, CustomerModule, ConfigModule.forRoot({
@@ -32,7 +33,8 @@ MongooseModule.forRoot(process.env.MONGO_URI!),
 Student1Module,
 User1Module,
 Student2Module,
-Employee2Module,],
+Employee2Module,
+Product1Module,],
   controllers: [AppController, UserController, ProductController, MynameController, UserRolesController, ExceptionController, DatabaseController, EvController],
   providers: [AppService, ProductService, DatabaseService, EvService],
 })
