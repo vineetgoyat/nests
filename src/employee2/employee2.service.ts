@@ -10,4 +10,6 @@ export class Employee2Service {
         @InjectModel(Employee2.name) private employee2Model: Model<Employee2>,
         @InjectModel(Profile.name) private profileModel: Model<Profile>,
     ){}
+
+    async createEmployee2
 }
