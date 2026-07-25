@@ -7,7 +7,8 @@ import {Tag} from './tag.schema';
 export class Product1 extends Document {
     @Prop()
     'title': string;
-    @Prop({type : [Tag]})
 
+    @Prop({type : [Tag]})
     'tags': Tag[];
 }
+export const Prodduct1Schema = SchemaFactory.createForClass(Product1);
