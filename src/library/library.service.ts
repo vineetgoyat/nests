@@ -19,6 +19,9 @@ export class LibraryService {
         const book2 = await this.bookModel.create(
             {title: 'Book 2', author: 'Author 2'},
         );
+        const library = await this.libraryModel.create(
+            {name: ''}
+        )
          };
     }
 
