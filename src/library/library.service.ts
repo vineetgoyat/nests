@@ -10,4 +10,15 @@ export class LibraryService {
         @InjectModel(Book.name) private readonly bookModel: Model<Book>,
         @InjectModel(Library.name) private readonly libraryModel: Model<Library>,
     ){}
-}
+
+    async createLibrary(): Promise<Library> {
+        const book1 = await this.bookModel.create(
+            {title: 'Book 1', author: 'Author 1'},
+
+        );
+        const book2 = await this.bookModel.create(
+            {title: 'Book 2', author: 'Author 2'},
+        );
+         };
+    }
+
