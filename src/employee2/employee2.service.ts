@@ -11,5 +11,10 @@ export class Employee2Service {
         @InjectModel(Profile.name) private profileModel: Model<Profile>,
     ){}
 
-    async createEmployee2
+    async createEmployee2(): Promise<Employee2>{
+        const profile= await new this.profileModel({
+            age:20,
+            qualification:'masters'
+        }).save();
+    }
 }
