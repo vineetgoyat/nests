@@ -20,6 +20,10 @@ export class Employee2Service {
         const employee2= await new this.employee2Model({
             name:'vineet',
             profile:profile._id
-        })
+        });
+
+        return employee2.save();
     }
+    async fingAll(): Promise<Employee2[]>{
+        return this.employee2Model.find();
 }
