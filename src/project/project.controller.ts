@@ -14,4 +14,9 @@ export class ProjectController {
     getDevelopers() {
         return this.service.getDevelopers();
     }
+
+    @Get()
+    getProjects() {
+        return this.service.getProjects();
+    }
 }
