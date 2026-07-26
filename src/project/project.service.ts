@@ -41,6 +41,7 @@ export class ProjectService {
                 $set: { developers: [dev1._id] }
             })
         ])
+        return {dev1, dev2};
 
      }
 
