@@ -15,7 +15,13 @@ export class ProjectService {
         const [project1, project2] = await Promise.all([
             this.projectModel.create({ title: 'Nest CRM'}),
             this.projectModel.create({ title: 'MONGO Analytics'})
-        ])
+        ]);
+
+        const [dev1, dev2] = await Promise.all([
+            this.dveloperModel.create({
+                name: 'Vineet',
+                projects: [projectA._id, projectB._id],
+                
+            })
     }
     
-}
