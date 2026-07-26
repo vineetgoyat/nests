@@ -5,7 +5,7 @@ import { Developer } from './developer.schema';
 @Schema({timestamps: true})
 export class Project extends Document {
     @Prop({required: true})
-    'name': string;
+    'title': string;
 
     @Prop({type: [{type: Types.ObjectId, ref: 'Developer'}]})
     'developers': Types.ObjectId[];
