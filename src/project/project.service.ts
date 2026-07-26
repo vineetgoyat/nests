@@ -11,28 +11,38 @@ export class ProjectService {
         @InjectModel(Project.name) private projectModel: Model<Project>
     ) {}
 
-    async seed(): Promise<dev1: Developer; dev2: Developer> {
-        const [project1, project2] = await Promise.all([
+    async seed(): Promise< {dev1: Developer; dev2: Developer} > {
+        const [projectA, projectB] = await Promise.all
+        ([
             this.projectModel.create({ title: 'Nest CRM'}),
             this.projectModel.create({ title: 'MONGO Analytics'})
         ]);
 
         const [dev1, dev2] = await Promise.all([
-            this.dveloperModel.create({
+            this.developerModel.create({
                 name: 'Vineet',
                 projects: [projectA._id, projectB._id],
 
-            })
+            }),
+
             this.developerModel.create({
                 name: 'John',
                 projects: [projectA._id],
             })
-        ]);
+        ])
 
         await Promise.all([
+
             this.projectModel.findByIdAndUpdate (projectA._id, {
                 $set: { developers: [dev1._id, dev2._id] }
+            }),
+
+            this.projectModel.findByIdAndUpdate (projectB._id, {
+                $set: { developers: [dev1._id] }
             })
-        ]);
-    }
+        ])
+
+     }
+
+}
     
