@@ -21,7 +21,18 @@ export class ProjectService {
             this.dveloperModel.create({
                 name: 'Vineet',
                 projects: [projectA._id, projectB._id],
-                
+
             })
+            this.developerModel.create({
+                name: 'John',
+                projects: [projectA._id],
+            })
+        ]);
+
+        await Promise.all([
+            this.projectModel.findByIdAndUpdate (projectA._id, {
+                $set: { developers: [dev1._id, dev2._id] }
+            })
+        ]);
     }
     
